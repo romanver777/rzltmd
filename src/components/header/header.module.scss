@@ -1,3 +1,113 @@
-.header{
-    
+@import "../../assets/styles/variables.scss";
+
+.header {
+  display: flex;
+  flex-direction: column;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__direction {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 12px;
+    padding: 19px 0;
+  }
+
+  &__direction-btn {
+    font-family: "SF-Pro-Text";
+    font-weight: 500;
+    font-size: 16px;
+    color: $color-basic-black;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__lang {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 12px;
+    padding: 19px 0;
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__logoWrap {
+    background-color: $color-white;
+    border-radius: 16px;
+    padding: 18px 56px 18px 22px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__logoLink {
+    display: flex;
+  }
+
+  &__logoText {
+    font-size: 14px;
+    line-height: 140%;
+    width: 103px;
+    color: $color-basic-grey;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__catalogLink {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 30px 60px;
+    border-radius: 16px;
+    color: $color-white;
+    background-color: $color-accent-blue;
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    padding: 30px 50px;
+    border-radius: 16px;
+    background-color: $color-white;
+  }
+
+  &__menuItem {
+    a {
+      font-weight: 500;
+      color: $color-basic-grey;
+    }
+  }
+
+  &__auth {
+    display: flex;
+    align-items: center;
+    padding: 30px 60px;
+    border-radius: 16px;
+    background-color: $color-white;
+
+    a {
+      font-weight: 500;
+      color: $color-accent-blue;
+    }
+  }
 }

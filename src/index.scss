@@ -1,8 +1,4 @@
-$color-basic-black: #050b2b;
-$color-basic-grey: #747474;
-$color-grey-light: #f8f8f8;
-$color-accent-blue: #0129e3;
-$color-white: #fff;
+@import "./assets/styles/variables.scss";
 
 @font-face {
   font-family: "SF-Pro-Text";
@@ -12,10 +8,10 @@ $color-white: #fff;
 }
 
 @font-face {
-  font-family: "SF-Pro-Text-Medium";
+  font-family: "SF-Pro-Text";
   src: local("SF-Pro-Text-Medium"),
     url("./assets/fonts/SF-Pro-Text/SFProText-Medium.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 500;
 }
 
 @font-face {
@@ -23,13 +19,15 @@ $color-white: #fff;
   src: local("SF-Pro-Display-Regular"),
     url(./assets/fonts/SF-Pro-Display/SF-Pro-Display-Regular.otf)
       format("opentype");
+  font-weight: normal;
 }
 
 @font-face {
-  font-family: "SF-Pro-Display-Medium";
+  font-family: "SF-Pro-Display";
   src: local("SF-Pro-Display-Medium"),
     url(./assets/fonts/SF-Pro-Display/SF-Pro-Display-Medium.otf)
       format("opentype");
+  font-weight: 500;
 }
 
 :root {
@@ -39,16 +37,39 @@ $color-white: #fff;
   background-color: $color-grey-light;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 h1,
 h2,
 h3 {
   margin: 0;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
 }
