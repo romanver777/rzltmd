@@ -1,3 +1,75 @@
-.cta{
-    
+@import "../../assets/styles/variables.scss";
+
+.cta {
+  color: $color-white;
+  padding: 70px 30px 40px;
+  border-radius: 26px;
+  background: url("../../assets/img/question-circle.png"),
+    linear-gradient(125deg, rgba(55, 159, 242, 1) 2%, rgba(2, 47, 228, 1) 91%);
+  background-position: top right;
+  background-repeat: no-repeat;
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 141px;
+    margin-bottom: 90px;
+  }
+
+  &__descr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 207px;
+    height: 40px;
+    border: 1px solid $color-white;
+    border-radius: 200px;
+    font-size: 14px;
+    line-height: 140%;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-family: "SF-Pro-Display";
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 105%;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__features {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__adv {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__advItem {
+    width: 25%;
+    padding: 26px 24px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 1;
+  }
+
+  &__advNum {
+    font-family: "SF-Pro-Display";
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 105%;
+  }
+
+  &__advText {
+    font-size: 16px;
+    line-height: 130%;
+  }
 }
