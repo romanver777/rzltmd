@@ -7,23 +7,45 @@
   align-items: center;
   gap: 12px;
 
+  span {
+    font-family: "SF-Pro-Text";
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.3s;
+  }
+
+  &:hover {
+    span {
+      text-decoration: underline;
+    }
+  }
+
   &_primary {
     background-color: $color-white;
 
     span {
-      font-family: "SF-Pro-Text";
-      font-size: 16px;
-      font-weight: 500;
       color: $color-basic-black;
-      text-decoration: underline;
-      text-decoration-color: transparent;
-      transition: text-decoration-color 0.3s;
     }
 
     &:hover {
       span {
-        text-decoration: underline;
         text-decoration-color: $color-basic-black;
+      }
+    }
+  }
+
+  &_accent {
+    background-color: $color-accent-blue;
+
+    span {
+      color: $color-white;
+    }
+
+    &:hover {
+      span {
+        text-decoration-color: $color-white;
       }
     }
   }
@@ -41,6 +63,9 @@
     }
   }
 
-  &_active {
+  &_colorAccent {
+    span {
+      color: $color-accent-blue;
+    }
   }
 }

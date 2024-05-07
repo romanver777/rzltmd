@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
+import Button from "../button/button";
 import markerIcon from "../../assets/icons/map-marker.svg";
 import ruIcon from "../../assets/icons/ru.svg";
 import arrowIcon from "../../assets/icons/angle-down.svg";
 import logoIcon from "../../assets/icons/logo.svg";
-import appIcon from "../../assets/icons/apps.svg";
 import style from "./header.module.scss";
 
 const Header = () => {
@@ -36,10 +36,7 @@ const Header = () => {
           <div className={style.header__logoText}>Консультация от врачей</div>
         </div>
         <nav className={style.header__nav}>
-          <Link className={style.header__catalogLink} to="">
-            <img src={appIcon} alt="app icon" width={16} height={16} />
-            <span>Каталог услуг</span>
-          </Link>
+          <Button type="accent" text="Каталог услуг" icon="app"/>
           <ul className={style.header__menu}>
             <li className={style.header__menuItem}>
               <Link to="">О проекте</Link>
@@ -51,10 +48,8 @@ const Header = () => {
               <Link to="">Контакты</Link>
             </li>
           </ul>
-          <div className={style.header__auth}>
-            <Link to="">Вход / Регистрация</Link>
-          </div>
         </nav>
+        <Button size="m" text="Вход / Регистрация" color="accent"/>
       </div>
     </header>
   );
