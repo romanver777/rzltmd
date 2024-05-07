@@ -40,7 +40,7 @@
   &__main {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
   }
 
   &__logoWrap {
@@ -68,20 +68,6 @@
     gap: 10px;
   }
 
-  &__catalogLink {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 30px 60px;
-    border-radius: 16px;
-    color: $color-white;
-    background-color: $color-accent-blue;
-
-    span {
-      font-weight: 500;
-    }
-  }
-
   &__menu {
     display: flex;
     align-items: center;
@@ -95,19 +81,6 @@
     a {
       font-weight: 500;
       color: $color-basic-grey;
-    }
-  }
-
-  &__auth {
-    display: flex;
-    align-items: center;
-    padding: 30px 60px;
-    border-radius: 16px;
-    background-color: $color-white;
-
-    a {
-      font-weight: 500;
-      color: $color-accent-blue;
     }
   }
 }

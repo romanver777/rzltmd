@@ -7,7 +7,15 @@ import questIcon from "../../assets/icons/question-circle.svg";
 import filesIcon from "../../assets/icons/files-landscapes-alt.svg";
 import style from "./button.module.scss";
 
-const Button = ({ type = "primary", data, icon = "", size = "m" }) => {
+const Button = ({
+  type = "primary",
+  text,
+  icon = "",
+  size = "m",
+  color = "",
+  className,
+  ...props
+}) => {
   const getIcon = (icon) => {
     switch (icon) {
       case "app":
@@ -30,6 +38,7 @@ const Button = ({ type = "primary", data, icon = "", size = "m" }) => {
     <button
       className={cn(
         style.button,
+        className,
         {
           [style.button_primary]: type === "primary",
           [style.button_accent]: type === "accent",
@@ -38,13 +47,17 @@ const Button = ({ type = "primary", data, icon = "", size = "m" }) => {
           [style.button_size_s]: size === "s",
           [style.button_size_m]: size === "m",
           [style.button_size_b]: size === "b",
+        },
+        {
+          [style.button_colorAccent]: color === "accent",
         }
       )}
+      {...props}
     >
       {icon && (
         <img src={getIcon(icon)} alt="icon" className={style.button__icon} />
       )}
-      <span className={style.button__text}>{data.text}</span>
+      <span className={style.button__text}>{text}</span>
     </button>
   );
 };

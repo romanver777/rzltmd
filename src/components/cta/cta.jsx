@@ -46,7 +46,7 @@ const Cta = () => {
         <ul className={style.cta__features}>
           {features.map((item, ind) => (
             <li key={ind}>
-              <Button icon={item.icon} data={item} size="b" />
+              <Button icon={item.icon} text={item.text} size="b" />
             </li>
           ))}
         </ul>
