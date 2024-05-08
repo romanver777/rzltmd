@@ -16,6 +16,11 @@
     width: fit-content;
     gap: 12px;
     padding: 19px 0;
+
+    @media (max-width: 767px) {
+      padding: 12px 0;
+      gap: 5px;
+    }
   }
 
   &__direction-btn {
@@ -23,6 +28,10 @@
     font-weight: 500;
     font-size: 16px;
     color: $color-basic-black;
+
+    @media (max-width: 767px) {
+      font-size: 12px;
+    }
 
     &:hover {
       text-decoration: underline;
@@ -35,12 +44,27 @@
     width: fit-content;
     gap: 12px;
     padding: 19px 0;
+
+    @media (max-width: 767px) {
+      padding: 12px 0;
+      gap: 5px;
+
+      img {
+        width: 22px;
+      }
+
+      button {
+        margin-left: 2px;
+        margin-right: -5px;
+      }
+    }
   }
 
   &__main {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
   }
 
   &__logoWrap {
@@ -50,10 +74,29 @@
     display: flex;
     align-items: center;
     gap: 20px;
+
+    @media (max-width: 1420px) {
+      padding: 8px 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      margin-right: auto;
+    }
+
+    @media (max-width: 767px) {
+      padding: 0 15px;
+    }
   }
 
   &__logoLink {
     display: flex;
+
+    @media (max-width: 767px) {
+      img {
+        width: 150px;
+      }
+    }
   }
 
   &__logoText {
@@ -61,6 +104,15 @@
     line-height: 140%;
     width: 103px;
     color: $color-basic-grey;
+
+    @media (max-width: 1420px) {
+      width: auto;
+      line-height: normal;
+    }
+
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
 
   &__nav {
@@ -75,6 +127,14 @@
     padding: 30px 50px;
     border-radius: 16px;
     background-color: $color-white;
+
+    @media (max-width: 1420px) {
+      padding: 30px;
+    }
+
+    @media (max-width: 900px) {
+      display: none;
+    }
   }
 
   &__menuItem {

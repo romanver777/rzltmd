@@ -4,6 +4,10 @@
   background-color: $color-basic-black;
   color: $color-grey-light;
 
+  @media (max-width: 1399px) {
+    padding: 0 15px;
+  }
+
   &__container {
     max-width: 1400px;
     margin: 0 auto;
@@ -14,10 +18,24 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+
+    @media (max-width: 990px) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+
+    @media (max-width: 767px) {
+      padding-block: 50px 30px;
+    }
   }
 
   &__logo {
     margin-bottom: 21px;
+
+    @media (max-width: 990px) {
+      margin-bottom: 8px;
+    }
   }
 
   &__logoText {
@@ -29,6 +47,10 @@
     line-height: 130%;
     font-weight: 400;
     margin-bottom: 24px;
+
+    @media (max-width: 1199px) {
+      font-size: 14px;
+    }
   }
 
   &__list {
@@ -45,6 +67,10 @@
     letter-spacing: -2%;
     color: #fff;
 
+    @media (max-width: 1199px) {
+      font-size: 16px;
+    }
+
     &_active {
       color: $color-accent-blue;
     }
@@ -58,5 +84,43 @@
     align-items: center;
     padding-block: 30px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    @media (max-width: 767px) {
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__brand {
+    @media (max-width: 990px) {
+      width: 100%;
+    }
+  }
+
+  &__catalog {
+    @media (max-width: 990px) {
+      flex-grow: 1;
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  &__action {
+    @media (max-width: 990px) {
+      flex-grow: 1;
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  &__project {
+    @media (max-width: 990px) {
+      flex-grow: 1;
+    }
   }
 }

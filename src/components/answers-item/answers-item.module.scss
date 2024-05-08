@@ -20,10 +20,20 @@
     line-height: 100%;
   }
 
+  &__quest {
+    @media (max-width: 767px) {
+      font-size: 12px;
+    }
+  }
+
   &__date {
     font-size: 14px;
     font-weight: 400;
     line-height: 140%;
+
+    @media (max-width: 767px) {
+      font-size: 12px;
+    }
   }
 
   &__body {
@@ -49,6 +59,7 @@
 
     &_orderLast {
       order: 2;
+      border-radius: 0 14px 14px 14px;
     }
 
     &_color_accent {
@@ -64,6 +75,7 @@
     padding-bottom: 10px;
     margin-bottom: 10px;
     border-bottom: 1px solid rgb(116, 116, 116, 0.1);
+    gap: 20px;
 
     &_bbcolor {
       border-bottom: 1px solid rgb(255, 255, 255, 0.1);
@@ -89,6 +101,10 @@
     font-size: 14px;
     line-height: 140%;
     color: $color-accent-blue;
+
+    @media (max-width: 767px) {
+      font-size: 12px;
+    }
   }
 
   &__questionUser {
@@ -97,11 +113,19 @@
     line-height: 100%;
     color: $color-basic-grey;
 
+    @media (max-width: 767px) {
+      font-size: 14px;
+    }
+
     &_color_white {
       font-size: 14px;
       font-weight: 400;
       line-height: 140%;
       color: $color-white;
+
+      @media (max-width: 767px) {
+        font-size: 12px;
+      }
     }
   }
 
@@ -114,25 +138,31 @@
     align-items: center;
     flex-shrink: 0;
 
+    @media (max-width: 767px) {
+      width: 40px;
+      height: 40px;
+
+      img {
+        width: 20px;
+      }
+    }
+
     &_bgcolor_blue {
       background-color: $color-blue;
     }
-    
+
     &_bgcolor_pink {
       background-color: $color-pink;
     }
 
     &_orderPrev {
       order: 1;
-    }
 
-    &_img {
-      border: 2px solid
-        linear-gradient(
-          125deg,
-          rgba(55, 159, 242, 1) 2%,
-          rgba(2, 47, 228, 1) 91%
-        );
+      @media (max-width: 767px) {
+        img {
+          width: 40px;
+        }
+      }
     }
   }
 
@@ -140,6 +170,10 @@
     font-weight: 500;
     line-height: 100%;
     color: $color-white;
+
+    @media (max-width: 767px) {
+      font-size: 13px;
+    }
   }
 
   &__btn {

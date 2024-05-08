@@ -36,7 +36,7 @@ const Header = () => {
           <div className={style.header__logoText}>Консультация от врачей</div>
         </div>
         <nav className={style.header__nav}>
-          <Button type="accent" text="Каталог услуг" icon="app"/>
+          <Button type="accent" text="Каталог услуг" icon="app" />
           <ul className={style.header__menu}>
             <li className={style.header__menuItem}>
               <Link to="">О проекте</Link>
@@ -49,7 +49,12 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <Button size="m" text="Вход / Регистрация" color="accent"/>
+        <Button
+          size="m"
+          text="Вход / Регистрация"
+          color="accent"
+          icon="login"
+        />
       </div>
     </header>
   );
