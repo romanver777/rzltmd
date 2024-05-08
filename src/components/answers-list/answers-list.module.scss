@@ -3,11 +3,21 @@
 .answersList {
   grid-column: 2/5;
 
+  @media (max-width: 991px) {
+    grid-column: auto;
+  }
+
   &__header {
     margin-bottom: 34px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    gap: 5px;
+
+    @media (max-width: 1030px) {
+      align-items: center;
+      gap: 15px;
+    }
   }
 
   &__title {
@@ -17,6 +27,14 @@
     line-height: 105%;
     max-width: 632px;
 
+    @media (max-width: 1199px) {
+      font-size: 35px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 25px;
+    }
+
     &_color {
       color: $color-basic-grey;
     }
@@ -24,6 +42,12 @@
 
   &__btnWrap {
     margin-bottom: 8px;
+
+    @media (max-width: 1030px) {
+      margin-bottom: 0;
+      display: flex;
+      gap: 10px;
+    }
   }
 
   &__search {
@@ -45,6 +69,12 @@
     font-size: 16px;
     line-height: 130%;
     color: $color-basic-grey;
+
+    @media (max-width: 767px) {
+      height: 40px;
+      padding: 20px 30px;
+      border-radius: 10px;
+    }
   }
 
   &__list {

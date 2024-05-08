@@ -7,6 +7,23 @@
   align-items: center;
   gap: 12px;
 
+  @media (max-width: 767px) {
+    border-radius: 10px;
+  }
+
+  &_filter {
+    display: none;
+
+    @media (max-width: 991px) {
+      display: block;
+      width: 56px;
+    }
+
+    @media (max-width: 767px) {
+      width: 40px;
+    }
+  }
+
   span {
     font-family: "SF-Pro-Text";
     font-size: 16px;
@@ -15,6 +32,54 @@
     text-decoration: underline;
     text-decoration-color: transparent;
     transition: text-decoration-color 0.3s;
+  }
+
+  &__icon {
+    display: block;
+
+    &_app + span {
+      @media (max-width: 1130px) {
+        display: none;
+      }
+    }
+
+    &_search + span {
+      @media (max-width: 1130px) {
+        display: none;
+      }
+    }
+
+    &_sort + span {
+      @media (max-width: 1130px) {
+        display: none;
+      }
+    }
+
+    &_filter + span {
+      @media (max-width: 1130px) {
+        width: 16px;
+      }
+    }
+
+    &_filter {
+      @media (max-width: 1130px) {
+        display: none;
+      }
+    }
+
+    &_login {
+      display: none;
+
+      + span {
+        @media (max-width: 1130px) {
+          display: none;
+        }
+      }
+
+      @media (max-width: 1130px) {
+        display: block;
+      }
+    }
   }
 
   &:hover {
@@ -54,13 +119,38 @@
   &_size {
     &_s {
       padding: 20px 40px;
+
+      @media (max-width: 1420px) {
+        padding: 20px;
+      }
+
+      @media (max-width: 767px) {
+        padding: 12px;
+      }
     }
     &_m {
       padding: 30px 60px;
+
+      @media (max-width: 1420px) {
+        padding: 30px;
+      }
+
+      @media (max-width: 767px) {
+        padding: 12px;
+      }
     }
     &_b {
       width: 292px;
       height: 76px;
+
+      @media (max-width: 1030px) {
+        width: 250px;
+        height: 65px;
+      }
+
+      @media (max-width: 500px) {
+        font-size: 12px;
+      }
     }
   }
 

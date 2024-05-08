@@ -6,6 +6,7 @@ import sortIcon from "../../assets/icons/sort-amount-up.svg";
 import starIcon from "../../assets/icons/star.svg";
 import questIcon from "../../assets/icons/question-circle.svg";
 import filesIcon from "../../assets/icons/files-landscapes-alt.svg";
+import loginIcon from "../../assets/icons/login.svg";
 import style from "./button.module.scss";
 
 const Button = ({
@@ -33,6 +34,8 @@ const Button = ({
         return questIcon;
       case "files":
         return filesIcon;
+      case "login":
+        return loginIcon;
       default:
         return "";
     }
@@ -54,6 +57,9 @@ const Button = ({
         {
           [style.button_colorAccent]: color === "accent",
           [style.button_colorGrey]: color === "grey",
+        },
+        {
+          [style.button_filter]: icon === "filter",
         }
       )}
       {...props}
@@ -62,7 +68,13 @@ const Button = ({
         <img
           src={getIcon(icon)}
           alt="icon"
-          className={style.button__icon}
+          className={cn(style.button__icon, {
+            [style.button__icon_app]: icon == "app",
+            [style.button__icon_login]: icon == "login",
+            [style.button__icon_search]: icon == "search_w",
+            [style.button__icon_sort]: icon == "sort",
+            [style.button__icon_filter]: icon == "filter",
+          })}
           width={16}
           height={16}
         />

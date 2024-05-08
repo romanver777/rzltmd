@@ -11,10 +11,11 @@ const AnswersList = () => {
       <header className={style.answersList__header}>
         <h2 className={style.answersList__title}>
           Список последних ответов на вопросы{" "}
-          <span className={style.answersList__title_color}>(12 493)</span>
+          <span className={style.answersList__title_color}>(12&nbsp;493)</span>
         </h2>
         <div className={style.answersList__btnWrap}>
-          <Button text="Сортировать по" icon="sort" size="s" color="grey" />
+          <Button text="Y" icon="filter" size="s" color="grey" />
+          <Button text="Сортировать&nbsp;по" icon="sort" size="s" color="grey" />
         </div>
       </header>
       <div className={style.answersList__search}>

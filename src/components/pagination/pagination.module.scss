@@ -29,6 +29,11 @@
     border: 1px solid transparent;
     transition: border-color 0.3s;
 
+    @media (max-width: 767px) {
+      width: 35px;
+      height: 35px;
+    }
+
     &_active {
       border: 1px solid $color-accent-blue;
       color: $color-accent-blue;

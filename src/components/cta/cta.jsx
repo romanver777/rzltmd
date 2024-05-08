@@ -41,7 +41,7 @@ const Cta = () => {
       <div className={style.cta__main}>
         <div className={style.cta__descr}>Консультация от врачей</div>
         <h2 className={style.cta__title}>
-          Получайте бесплатную консультацию от лучших специалистов
+          Получайте бесплатную консультацию от&nbsp;лучших специалистов
         </h2>
         <ul className={style.cta__features}>
           {features.map((item, ind) => (
