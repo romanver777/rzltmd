@@ -3,7 +3,6 @@ import Header from "../../components/header/header";
 import Content from "../../components/content/content";
 import Cta from "../../components/cta/cta";
 import Answers from "../../components/answers/answers";
-// import Footer from "../../components/footer/footer";
 
 const PageAnswers = () => {
   return (
@@ -13,9 +12,6 @@ const PageAnswers = () => {
         <Cta />
         <Answers />
       </Content>
-      {
-        //<Footer />
-      }
     </PageLayout>
   );
 };
