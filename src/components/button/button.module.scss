@@ -69,4 +69,10 @@
       color: $color-accent-blue;
     }
   }
+
+  &_colorGrey {
+    span {
+      color: $color-basic-grey;
+    }
+  }
 }

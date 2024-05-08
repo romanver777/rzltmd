@@ -1,3 +1,56 @@
+@import "../../assets/styles/variables.scss";
+
 .answersList {
   grid-column: 2/5;
+
+  &__header {
+    margin-bottom: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__title {
+    font-family: "SF-Pro-Display";
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 105%;
+    max-width: 632px;
+
+    &_color {
+      color: $color-basic-grey;
+    }
+  }
+
+  &__btnWrap {
+    margin-bottom: 8px;
+  }
+
+  &__search {
+    margin-bottom: 34px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__input {
+    display: flex;
+    flex-grow: 1;
+    height: 76px;
+    border-radius: 16px;
+    background-color: $color-white;
+    border: none;
+    outline: none;
+    padding: 28px 30px;
+    font-size: 16px;
+    line-height: 130%;
+    color: $color-basic-grey;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
 }

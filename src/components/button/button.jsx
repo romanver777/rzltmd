@@ -1,6 +1,7 @@
 import cn from "classnames";
 import appIcon from "../../assets/icons/apps.svg";
 import searchIcon from "../../assets/icons/search.svg";
+import searchWIcon from "../../assets/icons/search-w.svg";
 import sortIcon from "../../assets/icons/sort-amount-up.svg";
 import starIcon from "../../assets/icons/star.svg";
 import questIcon from "../../assets/icons/question-circle.svg";
@@ -22,6 +23,8 @@ const Button = ({
         return appIcon;
       case "search":
         return searchIcon;
+      case "search_w":
+        return searchWIcon;
       case "sort":
         return sortIcon;
       case "star":
@@ -50,12 +53,19 @@ const Button = ({
         },
         {
           [style.button_colorAccent]: color === "accent",
+          [style.button_colorGrey]: color === "grey",
         }
       )}
       {...props}
     >
       {icon && (
-        <img src={getIcon(icon)} alt="icon" className={style.button__icon} />
+        <img
+          src={getIcon(icon)}
+          alt="icon"
+          className={style.button__icon}
+          width={16}
+          height={16}
+        />
       )}
       <span className={style.button__text}>{text}</span>
     </button>
