@@ -1,4 +1,8 @@
 .pageLayout {
-  max-width: 1400px;
-  margin: 0 auto;
+  position: relative;
+
+  &__container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
 }
