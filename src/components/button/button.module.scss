@@ -88,6 +88,14 @@
     }
   }
 
+  @media (hover: none) {
+    &:hover {
+      span {
+        text-decoration: none;
+      }
+    }
+  }
+
   &_primary {
     background-color: $color-white;
 
@@ -98,6 +106,14 @@
     &:hover {
       span {
         text-decoration-color: $color-basic-black;
+      }
+    }
+
+    @media (hover: none) {
+      &:hover {
+        span {
+          text-decoration-color: transparent;
+        }
       }
     }
   }
@@ -112,6 +128,14 @@
     &:hover {
       span {
         text-decoration-color: $color-white;
+      }
+    }
+
+    @media (hover: none) {
+      &:hover {
+        span {
+          text-decoration-color: transparent;
+        }
       }
     }
   }

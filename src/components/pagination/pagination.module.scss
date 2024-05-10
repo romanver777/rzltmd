@@ -52,6 +52,18 @@
       transition: border-color 0.3s;
     }
 
+    @media (hover: none) {
+      &:hover {
+        border: 1px solid transparent;
+      }
+
+      &_active {
+        &:hover {
+          border: 1px solid $color-accent-blue;
+        }
+      }
+    }
+
     &_nohover:hover {
       border: 1px solid transparent;
     }
