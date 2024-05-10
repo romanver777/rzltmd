@@ -36,6 +36,12 @@
     &:hover {
       text-decoration: underline;
     }
+
+    @media (hover: none) {
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 
   &__lang {

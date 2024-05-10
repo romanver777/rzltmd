@@ -45,6 +45,14 @@
         text-decoration: underline;
       }
     }
+    
+    @media (hover: none) {
+      &:hover {
+        span {
+          text-decoration: none;
+        }
+      }
+    }
   }
 
   &__search {
